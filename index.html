@@ -7,5 +7,111 @@
     <link rel="stylesheet" href="./css/style.css" />
     <script defer src="./js/script.js"></script>
   </head>
-  <body></body>
+  <body>
+    <header class="header">
+      <a href="#" class="logo">
+        <img src="./img/icons/elevvo-logo.svg" alt="Elevvo logo" />
+      </a>
+      <a
+        href="http://www.linkedin.com/in/faresrashidy "
+        class="header-btn"
+        target="_blank"
+      >
+        <img src="./img/icons/linkedin-logo.svg" alt="Linkedin logo" />
+        <span>Profile</span></a
+      >
+    </header>
+
+    <main>
+      <section class="section">
+        <div class="container">
+          <h1 class="heading-primary">Contact Us</h1>
+          <p class="description">
+            Any questions or remarks? Just write us a message.
+          </p>
+
+          <div class="contact-container">
+            <div class="bg-box"></div>
+            <div class="text-box">
+              <form action="#" class="contact-form" autocomplete="on">
+                <div>
+                  <label for="fname">First Name</label>
+                  <input
+                    type="text"
+                    id="fname"
+                    name="fname"
+                    placeholder="John"
+                    autocomplete="given-name"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="lname">Last Name</label>
+                  <input
+                    type="text"
+                    id="lname"
+                    name="lname"
+                    placeholder="Adam"
+                    autocomplete="family-name"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="email">Email Address</label>
+
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="me@example.com"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="phone">Phone Number</label>
+
+                  <input
+                    id="phone"
+                    type="phone"
+                    placeholder="+20 101 234 56 78"
+                    required
+                  />
+                </div>
+
+                <div>
+                  <label for="select-where">Subject</label>
+                  <select name="select-where" id="select-where" required>
+                    <option value="">Please choose one option</option>
+                    <option value="General Inquiry">General Inquiry</option>
+                    <option value="Support Request">Support Request</option>
+                    <option value="Sales Question">Sales Question</option>
+                    <option value="Feedback / Suggestion">
+                      Feedback / Suggestion
+                    </option>
+                    <option value="Partnership Opportunity">
+                      Partnership Opportunity
+                    </option>
+                    <option value="Others">Others</option>
+                  </select>
+                </div>
+
+                <div class="textarea-box">
+                  <label for="message">Message</label>
+
+                  <textarea
+                    id="message"
+                    name="message"
+                    placeholder="Write your message..."
+                    class="textarea"
+                  ></textarea>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
