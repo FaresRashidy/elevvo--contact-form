@@ -1,0 +1,106 @@
+@media (max-width: 77.5em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .header {
+    padding: 0.8rem 8.6rem;
+  }
+
+  .section {
+    padding: 8rem 6.4rem;
+  }
+
+  .contact-form {
+    padding: 3.6rem;
+  }
+
+  .success-message {
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 63em) {
+  .section {
+    padding: 8rem 2.4rem;
+  }
+
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 50em) {
+  .section {
+    padding: 6.4rem 1.6rem;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .header {
+    padding: 0.8rem 6.4rem;
+  }
+}
+
+@media (max-width: 35em) {
+  .contact-form {
+    grid-template-columns: 1fr;
+    padding: 6.4rem 2.4rem;
+  }
+
+  .textarea-box {
+    grid-column: span 1;
+  }
+
+  .submit-btn {
+    grid-column: span 1;
+    justify-self: center;
+
+    grid-row: 7 / span 1;
+  }
+
+  .header {
+    padding: 0.8rem 4.8rem;
+  }
+
+  .success-message {
+    flex-direction: column;
+    text-align: center;
+    gap: 2.4rem;
+    max-width: fit-content;
+    padding: 0;
+    transform: scale(1);
+    font-size: 2.2rem;
+  }
+
+  .success-icon svg {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+}
+
+@media (max-width: 27.5em) {
+  .section {
+    padding: 4.8rem 0.8rem;
+  }
+
+  .bg-box {
+    max-width: fit-content;
+  }
+
+  .header {
+    padding: 0.8rem 1.6rem;
+  }
+}
+
+@media (max-width: 23em) {
+  .section {
+    padding: 4.8rem 0;
+  }
+
+  .container {
+    padding: 0;
+  }
+}

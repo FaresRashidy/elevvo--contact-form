@@ -276,6 +276,7 @@ FORM CARD
 }
 
 .submit-btn {
+  border: none;
   width: fit-content;
   grid-column: 2;
   justify-self: end;
