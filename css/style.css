@@ -90,7 +90,7 @@ body {
 }
 
 .container {
-  max-width: 120rem;
+  max-width: 160rem;
   padding: 0 3.2rem;
   margin: 0 auto;
 }
@@ -112,6 +112,10 @@ body {
 .contact-container {
   display: grid;
   grid-template-columns: 1fr 2fr;
+  background-color: #fff;
+  padding: 1.2rem;
+  border-radius: 28px;
+  box-shadow: 0 2.4rem 4.8rem #00000026;
 }
 
 .contact-form {
@@ -121,17 +125,106 @@ body {
 
   column-gap: 4.8rem;
   row-gap: 3.2rem;
+
+  padding: 6.4rem;
 }
 
 .contact-form *:focus {
   outline: none;
 }
 
+/**************
+BACKGROUND CARD
+****************/
+
+.bg-box {
+  background-image: url("../img/card-bg.svg");
+  background-size: cover;
+  background-position: left;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6.4rem;
+
+  color: #f6f2ff;
+
+  transition: all 0.3s;
+  border-radius: 16px;
+
+  padding: 6.4rem 4.8rem;
+}
+
+.heading-secondary {
+  font-size: 3.2rem;
+  font-weight: 600;
+  margin-bottom: 2.8rem;
+}
+
+.card-dis {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: #d8d1eb;
+}
+
+.contact-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 4.8rem;
+}
+
+.contact-list li {
+  display: flex;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.icon-list {
+  width: 3.6rem;
+  height: 3.6rem;
+  fill: #fa949d;
+}
+
+.contact-list a {
+  color: #f6f2ff;
+  text-decoration: none;
+  font-size: 2rem;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  gap: 1.6rem;
+  margin-top: auto;
+}
+
+.social-links svg {
+  width: 5.2rem;
+  height: 5.2rem;
+  fill: #f6f2ff;
+  padding: 0.8rem;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+
+.social-links svg:hover {
+  fill: #3e1f92;
+  background-color: #fa949d;
+}
+
+/**************
+FORM CARD
+****************/
+
 .contact-form label {
   display: block;
+  color: #888;
   font-size: 1.6rem;
   font-weight: 500;
   margin-bottom: 1rem;
+  padding-left: 1.2rem;
+
+  transition: all 0.3s;
 }
 
 .contact-form input,
@@ -140,20 +233,133 @@ body {
   width: 100%;
   border: none;
 
-  border-bottom: 2px solid #888;
+  border-bottom: 2px solid #ccc;
   background-color: inherit;
   font-family: inherit;
   font-size: 1.8rem;
   padding: 1.2rem;
-  padding-left: 0;
+  padding-left: 1.2rem;
+
+  transition: all 0.3s;
+}
+
+.contact-form input::placeholder,
+.contact-form select:has(option[value=""]:checked),
+.textarea::placeholder {
+  color: #bbb;
+}
+
+.contact-form div:has(select) {
+  margin-bottom: 3.2rem;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.textarea-box textarea:focus {
+  border-color: #3e1f92;
+}
+
+.contact-form div:focus-within label {
+  color: #3e1f92;
 }
 
 .textarea-box {
   /* width: 25px; */
   grid-column: span 2;
+  margin-bottom: 3.2rem;
 }
 
 .textarea-box textarea {
   field-sizing: content;
   resize: none;
+  padding-bottom: 4.8rem;
+}
+
+.submit-btn {
+  width: fit-content;
+  grid-column: 2;
+  justify-self: end;
+
+  background-color: #3e1f92;
+  border-radius: 6px;
+
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 500;
+  font-family: inherit;
+
+  padding: 2.4rem 4.8rem;
+
+  cursor: pointer;
+
+  transition: all 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: #351c7b;
+}
+
+.wrong input,
+.wrong select,
+.wrong textarea {
+  border-color: red;
+  color: red;
+}
+
+.wrong-message {
+  display: none;
+}
+
+.contact-form div {
+  margin-bottom: 2.8rem;
+}
+
+.wrong {
+  margin-bottom: 0 !important;
+}
+
+.contact-form .wrong:has(select) {
+  margin-bottom: 0.4rem !important;
+}
+
+.wrong .wrong-message {
+  display: block;
+  margin-top: 1.2rem;
+  color: red;
+  font-size: 1.6rem;
+}
+
+.meassge-container {
+  opacity: 0;
+  transition: opacity 0.8s ease;
+  pointer-events: none;
+  margin: 0 !important;
+}
+
+.meassge-container.show {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.success-message {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  transform: scale(1.4);
+  transform-origin: left center; /* grow to the right */
+
+  gap: 1.2rem;
+
+  font-size: 1.4rem;
+  color: #51cf66;
+  font-weight: 450;
+  padding: 0 1.6rem;
+
+  transition: all 1s;
+  margin: 0 !important;
+}
+
+.success-icon {
+  margin: 0 !important;
 }
